@@ -1,3 +1,4 @@
+import SongList from '../../components/SongList'
 
 
 export default function ArtistPage({ artist }) {
@@ -7,9 +8,7 @@ export default function ArtistPage({ artist }) {
             {artist.name}
             {artist.album.name}
             {artist.songs.map((data) => (
-              <li key={data.id}>
-                    {data.title}
-              </li>
+              <SongList key={data.id} songs={data} />
             ))}
     </div>
   )

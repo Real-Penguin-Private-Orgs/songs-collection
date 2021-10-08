@@ -14,6 +14,9 @@ export default async function handler(req, res) {
         case 'DELETE':
             deleteOne(req.query.id, res)
             break
+        case 'PUT':
+            updateOne(req.query.id, {...req.body}, res)
+            break
         default:
     }
 }
@@ -35,6 +38,16 @@ async function getOne(albumID, res) {
         }
     })
 
+    res.json(album)
+}
+
+async function updateOne(albumID, body, res) {
+    const album = await prisma.album.update({
+        where: {
+            id: albumID
+        },
+        data: body
+    })
     res.json(album)
 }
 

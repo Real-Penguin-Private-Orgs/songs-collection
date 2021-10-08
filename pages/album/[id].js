@@ -4,7 +4,7 @@ export default function AlbumPage({ album }) {
   return (
     <div>   
             <Head>
-                    <title>{album.name}</title>
+                  <title>{album.name}</title>
             </Head>
     </div>
   )

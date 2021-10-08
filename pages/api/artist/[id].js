@@ -28,13 +28,15 @@ async function getOne(artistID, res) {
             songs: {
                 select: {
                     id: true,
-                    title:  true
+                    title:  true,
+                    artist: true
                 }
             },
             album: {
                 select: {
                     id: true,
-                    name: true
+                    name: true,
+                    picture: true
                 }
             }
         }
