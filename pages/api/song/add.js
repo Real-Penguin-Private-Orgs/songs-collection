@@ -10,7 +10,6 @@ const schema = yup.object().shape({
     url: yup.string().trim().required().url()
 })
 
-
 /**
 *
 * @param {import('next').NextApiRequest} req

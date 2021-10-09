@@ -19,16 +19,13 @@ export default function SongCard({ song }) {
             {song.title} Information
             <ul className="divide-y divide-gray-300">
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  Peli list ni item
+                  Artist: {song.artist.name}
                 </li>
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  Biji list ni item
+                  Album: {song.album.name}
                 </li>
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  Triji list ni item
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  Chothi list ni item
+                  Year: {song.year}
                 </li>
             </ul>
           </p>

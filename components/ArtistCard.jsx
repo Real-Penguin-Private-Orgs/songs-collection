@@ -9,7 +9,6 @@ export default function ArtistCard({ artist }) {
           <img src={artist.picture} alt={`${artist.name}-img-${artist.id}`} className="rounded-tl-xl w-60 object-cover" />
           <div className="p-8">
              <h3 className="font-bold text-2xl mb-5">{artist.name}</h3>
-             {/**<p>This card has a header, body, and footer. This is where the content of the card goes.</p>*/}
            <Link href="/artist/[id]" as={`/artist/${artist.id}`} passHref>
               <button className="mt-5 rounded-lg px-4 py-2 bg-blue-500 text-blue-50 shadow hover:shadow-xl duration-300">
                   View {artist.name}
